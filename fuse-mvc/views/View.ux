@@ -1,0 +1,33 @@
+<StackPanel>
+
+	<JavaScript>
+
+		// exposing model and controller to this view
+		var model_is_flag = require ('Model').is_flag;
+		var controller_toggle_flag = require ('Controller').toggle_flag;
+
+		module.exports =
+		{
+		is_flag: model_is_flag,
+		toggle_flag: controller_toggle_flag
+		};
+
+	</JavaScript>
+
+	<WhileTrue Value="{is_flag}">
+		<Set _button.Visibility="Visible" />
+	</WhileTrue>
+
+	<WhileFalse Value="{is_flag}">
+		<Set _button.Visibility="Hidden" />
+	</WhileFalse>
+
+	<Button ux:Name="_button" Text="is_flag controlled button" />
+
+	<Button Text="Toggle Visibility">
+		<Tapped>
+			<Callback Handler="{toggle_flag}" />
+		</Tapped>
+	</Button>
+
+</StackPanel>

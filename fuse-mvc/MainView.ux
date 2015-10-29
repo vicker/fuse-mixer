@@ -1,0 +1,9 @@
+<App Theme="Basic">
+
+	<!-- including external JavaScript files so that they can be required globally -->
+	<JavaScript File="model.js" ux:Global="Model" />
+	<JavaScript File="controller.js" ux:Global="Controller" />
+
+	<View />
+
+</App>
