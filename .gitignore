@@ -1,0 +1,13 @@
+# Mac OS files
+.DS_Store
+
+# IntelliJ Idea personal files
+.idea/workspace.xml
+.idea/tasks.xml
+
+# IntelliJ JIRA plugin
+atlassian-ide-plugin.xml
+
+# Fuse binary files
+.build/
+.cache/
